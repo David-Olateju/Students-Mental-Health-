@@ -4,14 +4,12 @@ FROM StudentMentalHealth.dbo.['Student Mental health$']
 GROUP BY [Choose your gender];
 
 
-
 -- COUNT OF DEPRESSED STUDENTS BY AGE
 SELECT Age, COUNT(Age) AS Age_Count
 FROM StudentMentalHealth.dbo.['Student Mental health$']
 WHERE Age IS NOT NULL
 GROUP BY Age
 ORDER BY Age ASC;
-
 
 
 -- DEPRESSION BY YEAR OF STUDY
@@ -55,7 +53,6 @@ ORDER BY [Your current year of Study], [What is your CGPA?];
 
 
 
-
 -- DOES MARITAL STATUS MATTER?
 SELECT [Marital status], [Do you have Depression?], 
 		COUNT([Do you have Depression?]) AS Counts
@@ -65,7 +62,7 @@ ORDER BY [Do you have Depression?];
 
 
 
--- IS ANXIETY A FACTOR IN DEPRESSION LEVEL IN YEAR 1 STUDENTS?
+-- IS ANXIETY A FACTOR IN DEPRESSION-LEVEL IN YEAR 1 STUDENTS?
 SELECT [Your current year of Study], [Do you have Anxiety?],
 		COUNT([Your current year of Study])
 FROM StudentMentalHealth.dbo.['Student Mental health$']
